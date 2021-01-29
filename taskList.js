@@ -3,7 +3,14 @@ const createTaskFunc = (event) => {
 
     const input = document.querySelector('[data-form-input]')
     const inputValue = input.value
-    console.log(inputValue)
+    
+    const listElement = document.querySelector('[data-list]')
+    const taskElement = document.createElement('li')
+    const taskElementContent = `<p class='content'>${inputValue}</p>`
+    taskElement.innerHTML = taskElementContent
+    taskElement.classList.add('task')
+    listElement.appendChild(taskElement)
+
     input.value = ''
 }
 
