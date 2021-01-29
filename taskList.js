@@ -11,10 +11,21 @@ const createTaskFunc = (event) => {
     taskElement.classList.add('task')
     listElement.appendChild(taskElement)
 
+    taskElement.appendChild(doneButtonFunc())
+
     input.value = ''
 }
 
+const doneButtonFunc = ()=>{
+    const doneButton = document.createElement('button')
+    doneButton.classList.add('check')
+    doneButton.innerText = 'Concluido'
+    doneButton.addEventListener('click', ()=> {
+        console.log('fui clicado')
+    })
 
+    return doneButton
+}
 
 
 const buttonNewTask = document.querySelector('[data-form-button]')
@@ -22,3 +33,4 @@ const buttonNewTask = document.querySelector('[data-form-button]')
 buttonNewTask.addEventListener('click', createTaskFunc)
     
     
+
