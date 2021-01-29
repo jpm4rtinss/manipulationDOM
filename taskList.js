@@ -20,14 +20,17 @@ const doneButtonFunc = ()=>{
     const doneButton = document.createElement('button')
     doneButton.classList.add('check')
     doneButton.innerText = 'Concluido'
-    doneButton.addEventListener('click', ()=> {
-        console.log('fui clicado')
-    })
+    doneButton.addEventListener('click', completeTaskFunc)
 
     return doneButton
 }
 
+const completeTaskFunc = (event)=>{
+    const doneButton = event.target 
+    const taskCompleted = doneButton.parentElement
 
+    taskCompleted.classList.toggle('done')
+}
 const buttonNewTask = document.querySelector('[data-form-button]')
 
 buttonNewTask.addEventListener('click', createTaskFunc)
