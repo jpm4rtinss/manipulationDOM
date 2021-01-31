@@ -1,4 +1,5 @@
-const createTaskFunc = (event) => {
+( () => {
+    const createTaskFunc = (event) => {
     event.preventDefault()
 
     const input = document.querySelector('[data-form-input]')
@@ -34,6 +35,6 @@ const completeTaskFunc = (event)=>{
 const buttonNewTask = document.querySelector('[data-form-button]')
 
 buttonNewTask.addEventListener('click', createTaskFunc)
-    
+})()
     
 
