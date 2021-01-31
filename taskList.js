@@ -35,6 +35,18 @@ const completeTaskFunc = (event)=>{
 const buttonNewTask = document.querySelector('[data-form-button]')
 
 buttonNewTask.addEventListener('click', createTaskFunc)
+
+const deleteButtonFunc = ()=>{
+    const deleteButton = document.createElement('button')
+    deleteButton.innerText = 'Deletar'
+    deleteButton.addEventListener('click', ()=>{
+        console.log('deletado')
+        
+    })
+    return deleteButton
+    
+
+}
 })()
     
 
